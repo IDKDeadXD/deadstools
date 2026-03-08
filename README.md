@@ -96,4 +96,4 @@ A private **Electron** app used to publish new releases. It scans a selected `di
 
 Releases are distributed as an NSIS installer built with **electron-builder**. The admin app uploads each build to the VPS update server. End users install once and receive all future updates automatically.
 
-> This repository does not contain source code.
+> This repository does not contain source code and will not include it.
