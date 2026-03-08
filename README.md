@@ -28,6 +28,12 @@ The project is split into three parts: the **main client app**, a **self-hosted 
 
 ---
 
+## Roadmap
+
+The public roadmap is tracked on Trello: [https://trello.com/b/x5SZjxaG/deads-tools](https://trello.com/b/x5SZjxaG/deads-tools)
+
+---
+
 ## Architecture
 
 ```
