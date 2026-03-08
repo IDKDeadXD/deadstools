@@ -12,7 +12,7 @@
 
 ## Overview
 
-DeadsTools is a native Windows desktop application that streamlines the Minecraft Bedrock addon development workflow. It handles project organisation, file obfuscation, and keeps itself up to date automatically — all without leaving the app.
+DeadsTools is a native Windows desktop application that streamlines the Minecraft Bedrock addon development workflow. It handles project organisation, file obfuscation, and keeps itself up to date automatically - all without leaving the app.
 
 The project is split into three parts: the **main client app**, a **self-hosted update server**, and a private **admin app** used to publish releases.
 
@@ -20,11 +20,11 @@ The project is split into three parts: the **main client app**, a **self-hosted 
 
 ## Features
 
-- **Project Manager** — Create, organise, and switch between addon projects with a clean card-based UI
-- **com.mojang Detection** — Automatically locates your Bedrock development folder on first launch
-- **JS & JSON Obfuscation** — Protect addon scripts and data files with one click
-- **Auto-Updater** — Silently downloads updates in the background and prompts with a markdown changelog modal on next launch
-- **Setup Wizard** — Guided first-run experience for new users
+- **Project Manager** - Create, organise, and switch between addon projects with a clean card-based UI
+- **com.mojang Detection** - Automatically locates your Bedrock development folder on first launch
+- **JS & JSON Obfuscation** - Protect addon scripts and data files with one click
+- **Auto-Updater** - Silently downloads updates in the background and prompts with a markdown changelog modal on next launch
+- **Setup Wizard** - Guided first-run experience for new users
 
 ---
 
@@ -32,9 +32,9 @@ The project is split into three parts: the **main client app**, a **self-hosted 
 
 ```
 DeadsTools/
-├── Client App          Electron — main user-facing application
-├── Update Server       Express — self-hosted on a VPS, serves latest.yml + versioned builds
-└── Admin App           Electron — private tool for publishing new releases
+├── Client App          Electron - main user-facing application
+├── Update Server       Express - self-hosted on a VPS, serves latest.yml + versioned builds
+└── Admin App           Electron - private tool for publishing new releases
 ```
 
 ### Client App
@@ -49,7 +49,7 @@ A lightweight **Express** server running on a VPS. Each release is stored under 
 
 | Endpoint | Description |
 |---|---|
-| `GET /update/latest.yml` | Dynamically generated — consumed by electron-updater |
+| `GET /update/latest.yml` | Dynamically generated - consumed by electron-updater |
 | `GET /update/v{ver}/changelog.md` | Raw markdown changelog for the client modal |
 | `GET /update/version` | Latest version metadata (JSON) |
 | `POST /admin/upload` | Authenticated multipart upload (exe + notes) |
@@ -71,7 +71,7 @@ A private **Electron** app used to publish new releases. It scans a selected `di
 2. electron-updater fetches /update/latest.yml
 3. If server version > installed version → update-available fires
 4. App fetches /update/v{version}/changelog.md
-5. Changelog rendered in modal — user sees "What's New"
+5. Changelog rendered in modal - user sees "What's New"
 6. electron-updater downloads installer silently in background
 7. User clicks "Restart & Update" → quitAndInstall(silent, forceRun)
 8. NSIS installer runs silently, app relaunches at new version
